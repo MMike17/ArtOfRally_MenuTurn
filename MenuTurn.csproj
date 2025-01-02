@@ -38,6 +38,10 @@
     <GameModPath>$([System.IO.Path]::Combine($(GamePath), Mods\$(AssemblyName)))</GameModPath>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Rewired_Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Rewired_Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -91,7 +95,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="CleanFolder" AfterTargets="BeforeBuild">
-	<RemoveDir Directories="$(GameModPath)" />
+    <RemoveDir Directories="$(GameModPath)" />
   </Target>
   <Target Name="CopyInfo" AfterTargets="BeforeBuild">
     <Copy SourceFiles="Info.json" DestinationFolder="$(GameModPath)" />
