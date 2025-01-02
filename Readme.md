@@ -46,4 +46,5 @@ and drop it into the mod manager's mods page.
 
 ## Showcase
 
-![](Screenshots/TurnAnimation.gif.png)
+![](Screenshots/TurnAnimation.gif)
+![](Screenshots/Settings.PNG)
