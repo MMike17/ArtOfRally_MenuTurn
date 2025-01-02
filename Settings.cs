@@ -16,10 +16,6 @@ namespace MenuTurn
         [Draw(DrawType.Slider, Min = 0, Max = 5)]
         public float rotationDelay = 2;
 
-        [Header("Debug")]
-        [Draw(DrawType.Toggle)]
-        public bool disableInfoLogs = true;
-
         public override void Save(ModEntry modEntry) => Save(this, modEntry);
 
         public void OnChange()
