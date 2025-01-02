@@ -1,6 +1,6 @@
 using HarmonyLib;
 
-namespace ModBase
+namespace MenuTurn
 {
 	// Patch model
 	// [HarmonyPatch(typeof(), nameof())]

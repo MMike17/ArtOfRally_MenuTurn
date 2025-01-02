@@ -1,11 +1,11 @@
 {
-	"Id": "ModBase",
-	"DisplayName": "ModBase",
+	"Id": "MenuTurn",
+	"DisplayName": "MenuTurn",
 	"Author": "MMike17",
 	"Version": "1.0.0",
 	"GameVersion": "1.5,5",
-	"AssemblyName": "ModBase.dll",
-	"EntryMethod": "ModBase.Main.Load",
+	"AssemblyName": "MenuTurn.dll",
+	"EntryMethod": "MenuTurn.Main.Load",
 	"HomePage": "<modHomepageLink>",
-	"Repository": "<modRepoLink>"
+	"Repository": "https://raw.githubusercontent.com/MMike17/ArtOfRally_MenuTurn/main/Repository.json"
 }
