@@ -12,7 +12,9 @@ namespace MenuTurn
         [Draw(DrawType.Slider, Min = 0, Max = 2)]
         public float rotationSpeed = 0.5f;
         [Draw(DrawType.Auto)]
-        public bool reverseRotation;
+        public bool reverseRotation = false;
+        [Draw(DrawType.Slider, Min = 0, Max = 5)]
+        public float rotationDelay = 2;
 
         [Header("Debug")]
         [Draw(DrawType.Toggle)]
