@@ -20,10 +20,6 @@ A small mod for Art of Rally making cars turn in menus.
 ![](https://img.shields.io/badge/XBox-Untested-yellow)
 ![](https://img.shields.io/badge/Switch-Untested-yellow)
 
-## Requirements
-
-Latest release [![](https://img.shields.io/github/v/release/MMike17/ArtOfRally_MenuTurn?label=Menu%20turn)](https://github.com/MMike17/ArtOfRally_MenuTurn/releases/latest)
-
 ## Usage
 
 Press Ctrl + F10 to open the mod manager menu.\
