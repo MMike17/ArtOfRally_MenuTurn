@@ -27,16 +27,15 @@ Latest release [![](https://img.shields.io/github/v/release/MMike17/ArtOfRally_M
 ## Usage
 
 Press Ctrl + F10 to open the mod manager menu.\
-Adjust settings to select [...] you want.\
-By default, the mod [...].
+Adjust settings to change how the cars behave in menus.\
 
-- **<settingName>** : will [...].
+By default, the mod rotates cars automatically in menus, interrupts that behaviour on player input and resumes it after 2 seconds.
 
-Disabling the mod in the manager will [...] by default.
+- **rotationSpeed** : speed at which the cars will turn in menus.
+- **reverseRotation** : reverses the direction in which cars will turn towards.
+- **rotationDelay** : delay, after a player input, before the car starts turning automatically again.
 
-## Disclaimer
-
-[...]
+Disabling the mod in the manager will reinstate the default game behaviour.
 
 ## Installation
 
@@ -47,8 +46,4 @@ and drop it into the mod manager's mods page.
 
 ## Showcase
 
-![](Screenshots/.png)
-
-## Acknowledgments
-
-[...]
+![](Screenshots/TurnAnimation.gif.png)
