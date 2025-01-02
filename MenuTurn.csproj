@@ -90,6 +90,9 @@
     <Compile Include="**\*.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="CleanFolder" AfterTargets="BeforeBuild">
+	<RemoveDir Directories="$(GameModPath)" />
+  </Target>
   <Target Name="CopyInfo" AfterTargets="BeforeBuild">
     <Copy SourceFiles="Info.json" DestinationFolder="$(GameModPath)" />
   </Target>
