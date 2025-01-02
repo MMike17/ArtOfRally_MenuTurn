@@ -15,7 +15,7 @@ namespace MenuTurn
 
         public static ModEntry.ModLogger Logger;
         public static Settings settings;
-        
+
         static List<GameObject> markers;
         static Material markerMat;
 
@@ -75,7 +75,7 @@ namespace MenuTurn
         }
 
         /// <summary>BindingFlags.NonPrivate is implicit</summary>
-        public static void SetField<T, U>(U source, string fieldName, BindingFlags flags, object value)
+        public static void SetField<U>(U source, string fieldName, BindingFlags flags, object value)
         {
             FieldInfo info = source.GetType().GetField(fieldName, flags | BindingFlags.NonPublic);
 
@@ -100,46 +100,6 @@ namespace MenuTurn
             }
 
             info.Invoke(source, args);
-        }
-
-        public static void SetMarkers(bool state)
-        {
-            CleanMarkerList();
-            markers.ForEach(item => item.SetActive(state));
-        }
-
-        public static void AddMarker(Transform parent, Vector3 position, float size)
-        {
-            if (markerMat == null)
-            {
-                markerMat = new Material(Shader.Find("Standard"));
-                markerMat.color = Color.red;
-                markerMat.SetColor("_EmissionColor", Color.red);
-            }
-
-            GameObject marker = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            marker.GetComponent<Renderer>().material = markerMat;
-
-            marker.transform.SetParent(parent);
-            marker.transform.position = position;
-            marker.transform.localScale = Vector3.one * size;
-
-            marker.SetActive(settings.showMarkers);
-            markers.Add(marker);
-        }
-
-        static void CleanMarkerList()
-        {
-            List<int> toRemove = new List<int>();
-
-            for (int i = 0; i < markers.Count; i++)
-            {
-                if (markers[i] == null)
-                    toRemove.Add(i);
-            }
-
-            toRemove.Reverse();
-            toRemove.ForEach(index => markers.RemoveAt(index));
         }
     }
 }
