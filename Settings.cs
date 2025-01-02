@@ -8,19 +8,20 @@ namespace MenuTurn
     public class Settings : ModSettings, IDrawable
     {
         // [Draw(DrawType.)]
-        
+
+        [Draw(DrawType.Slider, Min = 0, Max = 2)]
+        public float rotationSpeed = 0.5f;
+        [Draw(DrawType.Auto)]
+        public bool reverseRotation;
+
         [Header("Debug")]
         [Draw(DrawType.Toggle)]
-        public bool showMarkers;
-        [Draw(DrawType.Toggle)]
-        public bool disableInfoLogs;
+        public bool disableInfoLogs = true;
 
         public override void Save(ModEntry modEntry) => Save(this, modEntry);
 
         public void OnChange()
         {
-            Main.SetMarkers(showMarkers);
-
             //
         }
     }
